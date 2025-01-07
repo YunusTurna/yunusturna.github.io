@@ -1,7 +1,262 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Portfolio website complete</title>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">Yunus</a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#games" class="nav__link">Games</a></li>
+                    <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HOME SECTION -->
+    <section class="home bd-grid" id="home">
+        <div class="home__data">
+            <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Yunus</span><br> Jr.Game Developer</h1>
+        </div>
+
+        <div class="home__social">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/ahmetyunusturna" target="_blank" class="home__social-icon">
+                <i class='bx bxl-linkedin'></i>
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/yunusturna" target="_blank" class="home__social-icon">
+                <i class='bx bxl-github'></i>
+            </a>
+        </div>
+
+
+    </section>
+
+    <!--===== ABOUT =====-->
+    <section class="about section " id="about">
+        <h2 class="section-title">About</h2>
+
+        <div class="about__container bd-grid">
+            <div class="about__img">
+            </div>
+
+            <div>
+                <h2 class="about__subtitle">I'am Yunus</h2>
+                <p class="about__text">A computer engineering student with a strong technical foundation and a passion for game development. I have experience in developing core game mechanics and designing player interactions using Unity and C#, along with skills in project management and leadership as president of GDG On Campus Doğuş University.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--===== SKILLS =====-->
+    <section class="skills section" id="skills">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills__container bd-grid">
+            <div class="skills__grid">
+                <!-- Unity -->
+                <div class="skills__box">
+                    <img src="assets/img/unityLogo.png" alt="Unity Logo" class="skills__icon">
+                    <span class="skills__name">Unity</span>
+                </div>
+
+                <!-- C# -->
+                <div class="skills__box">
+                    <img src="assets/img/csharpLogo.png" alt="C# Logo" class="skills__icon">
+                    <span class="skills__name">C#</span>
+                </div>
+
+                <!-- Kotlin -->
+                <div class="skills__box">
+                    <img src="assets/img/kotlinLogo.png" alt="Kotlin Logo" class="skills__icon">
+                    <span class="skills__name">Kotlin</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!--===== games =====-->
+    <section class="games section" id="games">
+        <h2 class="section-title">Games</h2>
+
+        <div class="games__container bd-grid">
+            <!-- YouTube Video 1 -->
+            <div class="games__item">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/b6tLIQdHB-U" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <p class="games__description">Blocktopia is a vibrant and humorous clicker city-builder game. Gather
+                    resources, build your town, and defend it against nightly raids!
+                    In this chaotic world where justice prevails, survive and dive into a fun city-building
+                    experience!</p>
+            </div>
+
+            <!-- YouTube Video 2 -->
+            <div class="games__item">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/P-Es68XFPlU" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <p class="games__description">Kiki, is a single player story driven action adventure game with
+                    survival
+                    elements where you will control Kiki as she goes into a journey to save her village from years
+                    of curse in a fantastic world.</p>
+            </div>
+
+            <!-- YouTube Video 3 -->
+            <div class="games__item">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/ivb7oaPXNc8" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <p class="games__description">
+                    CherryChasers is an online party game with 5 maps, each featuring unique mechanics.
+                    This game offers exciting, fast-paced action as players
+                    compete using different characters, with the mechanics of each map creating new challenges.</p>
+            </div>
+        </div>
+    </section>
+
+   <!--===== EXPERIENCE =====-->
+<section class="experiences section" id="experience">
+    <h2 class="section-title">Experience</h2>
+    <div class="experiences__container bd-grid">
+        <div class="experience__item">
+            <img src="assets/img/genarionLogo.jpg" alt="Genarion Logo" class="experience__logo">
+            <div class="experience__details">
+                <h3 class="experience__title">Genarion</h3>
+                <span class="experience__subtitle">Intern Unity Developer</span>
+                <ul class="experience__list">
+                    <li>Creating Unity DB infrastructure and environment designed by the project team meant to serve the LLM based NPC speech-engine.</li>
+                    <li>Creating game environment, assets, and mechanics designed by the project team.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="experience__item">
+            <img src="assets/img/girvakLogo.jpg" alt="Türkiye Girişimcilik Vakfı Logo" class="experience__logo">
+            <div class="experience__details">
+                <h3 class="experience__title">Türkiye Girişimcilik Vakfı</h3>
+                <span class="experience__subtitle">Talen Intern</span>
+                <ul class="experience__list">
+                    <li>Managed a community of over 2,000 members.</li>
+                    <li>Organized and executed events that fostered collaboration and engagement.</li>
+                    <li>Led strategic planning for community growth and development.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="experience__item">
+            <img src="assets/img/stakGamesLogo.jpg" alt="Stak Games Logo" class="experience__logo">
+            <div class="experience__details">
+                <h3 class="experience__title">Stak Games</h3>
+                <span class="experience__subtitle">Jr. Game Developer</span>
+                <ul class="experience__list">
+                    <li>Core gameplay mechanics design and development for various games.</li>
+                    <li>Building player-map interaction systems across multiple games.</li>
+                    <li>Implementing player-UI interaction systems in different game projects.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="experience__item">
+            <img src="assets/img/undocoLogo.png" alt="Undoco Games Logo" class="experience__logo">
+            <div class="experience__details">
+                <h3 class="experience__title">Undoco Games</h3>
+                <span class="experience__subtitle">Jr. Game Developer & Project Manager</span>
+                <ul class="experience__list">
+                    <li>Project planning and execution using Trello, Figma, and Notion.</li>
+                    <li>Development of player-map interaction systems for various maps and characters for multiplayer games.</li>
+                    <li>Undoco Games redeemed worthy for BUG-Lab Tekmer Pre-incubation program.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--===== EDUCATION =====-->
+<section class="education section" id="education">
+    <h2 class="section-title">Education</h2>
+    <div class="education__container bd-grid">
+        <div class="education__item">
+            <img src="assets/img/douLogo.png" alt="Doğuş University Logo" class="education__logo">
+            <div class="education__details">
+                <h3 class="education__title">Doğuş University</h3>
+                <span class="education__subtitle">Bachelor's Degree in Computer Engineering</span>
+            </div>
+        </div>
+
+        <div class="education__item">
+            <img src="assets/img/vsbLogo.png" alt="VSB-TUO Logo" class="education__logo">
+            <div class="education__details">
+                <h3 class="education__title">VSB-TUO</h3>
+                <span class="education__subtitle">Erasmus</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!--===== CONTACT =====-->
+    <section class="contact section" id="contact">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact__container bd-grid">
+            <form action="" class="contact__form">
+                <input type="text" placeholder="Name" class="contact__input">
+                <input type="mail" placeholder="Email" class="contact__input">
+                <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                <input type="button" value="Enviar" class="contact__button button">
+            </form>
+        </div>
+    </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">Yunus Turna</p>
+        <div class="footer__social">
+            <a href="#" class="footer__icon"><i class='bx bxl-facebook'></i></a>
+            <a href="#" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+            <a href="#" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+        </div>
+        <p class="footer__copy">&#169; Bedimcode. All rigths reserved 2025</p>
+    </footer>
+
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
