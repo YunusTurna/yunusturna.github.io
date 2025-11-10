@@ -288,13 +288,12 @@ img {
 
 .skills__container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  /* Yatayda ortala */
   align-items: center;
-  /* Dikeyde ortala */
-  flex-direction: column;
-  /* Üst üste hizalama */
+  text-align: center;
 }
+
 
 .skills__grid {
   display: grid;
@@ -736,6 +735,17 @@ img {
       /* Başlık boyutunu daha da küçült */
     }
   }
+
+  /* === Fix Skills Alignment === */
+  .skills__container {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
 
 
 
