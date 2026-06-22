@@ -39,7 +39,8 @@
     <!-- HOME SECTION -->
     <section class="home bd-grid" id="home">
         <div class="home__data">
-            <h1 class="home__title">Hi,<br>I am <span class="home__title-color">Ahmet Yunus</span><br>Jr. Game Developer
+            <h1 class="home__title">Hi,<br>I am <span class="home__title-color">Ahmet Yunus</span><br>Computer Engineer
+                &amp;<br>Game Developer
             </h1>
         </div>
 
@@ -51,6 +52,10 @@
             <!-- GitHub -->
             <a href="https://github.com/yunusturna" target="_blank" class="home__social-icon">
                 <i class='bx bxl-github'></i>
+            </a>
+            <!-- Itch.io -->
+            <a href="https://yunusturna.itch.io/" target="_blank" class="home__social-icon">
+                <img src="assets/img/itch-io-logo.png" alt="Itch.io Logo" class="social-icon-img" />
             </a>
         </div>
     </section>
@@ -66,9 +71,11 @@
 
             <div>
                 <h2 class="about__subtitle">I am Ahmet Yunus</h2>
-                <p class="about__text">a computer engineering student and game developer specializing in Unity and C#. I focus on building gameplay mechanics and technical systems for various projects. 
-                    Additionally, I create content regarding game design and development processes to share my insights. 
-                    I enjoy both the technical implementation and the creative analysis of games.</p>
+                <p class="about__text">I am a fresh graduate Computer Engineer. While my primary focus and passion lie
+                    in Game Development (specializing in Unity and C#), I love exploring different technology stacks to
+                    expand my engineering horizons. As part of this exploration, I have experimented with cross-platform
+                    mobile app development using Flutter and IoT hardware integrations. I aim to combine these diverse
+                    skills to create polished, high-performance interactive experiences.</p>
             </div>
         </div>
     </section>
@@ -90,171 +97,219 @@
                     <img src="assets/img/csharpLogo.png" alt="C# Logo" class="skills__icon" />
                     <span class="skills__name">C#</span>
                 </div>
+
+                <!-- Flutter -->
+                <div class="skills__box">
+                    <img src="assets/img/flutterLogo.svg" alt="Flutter Logo" class="skills__icon" />
+                    <span class="skills__name">Flutter</span>
+                </div>
+
+                <!-- Dart -->
+                <div class="skills__box">
+                    <img src="assets/img/dart-language.png" alt="Dart Logo" class="skills__icon" />
+                    <span class="skills__name">Dart</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!--===== GAMES / PROJECTS =====-->
+    <!--===== PROJECTS =====-->
     <section class="games section" id="games">
         <h2 class="section-title">Projects</h2>
 
-        <!-- Game Projects -->
-        <h3 class="projects__subtitle">🎮 Game Projects</h3>
-        <div class="games__container bd-grid" style="display: flex; flex-wrap: wrap; gap: 2rem;">
-            <div style="display: flex; flex-direction: column; width: 100%;">
-                <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
-                    <!-- YouTube Video (Added) -->
-                    <div class="games__item" style="flex: 1 1 45%; min-width: 250px; max-width: 48%;">
-                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/G4hUbzfz_Z4"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <p class="games__description">Sixth Chamber is a Russian roulette-themed card game where the player uses their cards and weapon strategically to defeat the opponent and aim for the highest score.</p>
-                    </div>
-                     <div class="games__item" style="flex: 1 1 45%; min-width: 250px; max-width: 48%;">
-                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/-5jq1QrIfM0?si=4t94Bc1wr1SJBi9n"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <p class="games__description">Maze Slide is an engaging mobile puzzle game where players navigate complex mazes using unique ball types and strategic power-ups to find the path to the exit.</p>
-                    </div>
+        <!-- Projects Tabs -->
+        <div class="projects__tabs">
+            <button class="tab__btn active" onclick="switchTab('game-projects')">
+                🎮 Game Projects
+            </button>
+            <button class="tab__btn" onclick="switchTab('app-projects')">
+                📱 Mobile Apps
+            </button>
+        </div>
 
-                    <!-- YouTube Video 1 -->
-                    <div class="games__item" style="flex: 1 1 45%; min-width: 250px; max-width: 48%;">
-                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/b6tLIQdHB-U"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <p class="games__description">Blocktopia is a vibrant and humorous clicker city-builder game.
-                            Gather resources, build your town, and defend it against nightly raids! In this chaotic world
-                            where justice prevails, survive and dive into a fun city-building experience!</p>
-                    </div>
-
-                    <!-- YouTube Video 2 -->
-                    <div class="games__item" style="flex: 1 1 45%; min-width: 250px; max-width: 48%;">
-                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/P-Es68XFPlU"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <p class="games__description">Kiki is a single player story driven action adventure game with
-                            survival elements where you will control Kiki as she goes into a journey to save her village
-                            from years of curse in a fantastic world.</p>
-                    </div>
+        <!-- Game Projects Content -->
+        <div id="game-projects" class="projects__content active">
+            <div class="games__container bd-grid">
+                <!-- Sixth Chamber -->
+                <div class="games__item">
+                    <iframe width="100%" height="180" src="https://www.youtube.com/embed/G4hUbzfz_Z4" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <p class="games__description">Sixth Chamber is a Russian roulette-themed card game where the player
+                        uses their cards and weapon strategically to defeat the opponent and aim for the highest score.
+                    </p>
                 </div>
 
-                <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem;">
-                    <!-- YouTube Video 3 -->
-                    <div class="games__item" style="flex: 1 1 45%; min-width: 250px; max-width: 48%;">
-                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/ivb7oaPXNc8"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <p class="games__description">
-                            CherryChasers is an online party game with 5 maps, each featuring unique mechanics. This game
-                            offers exciting, fast-paced action as players compete using different characters, with the
-                            mechanics of each map creating new challenges.
-                        </p>
-                    </div>
-
-                    <!-- GDG Website -->
-                    <div class="games__item" style="flex: 1 1 45%; min-width: 250px; max-width: 48%;">
-                        <a href="https://gdgoncampusdou.com.tr/" target="_blank"
-                            style="display:block; width:100%; height:180px;">
-                            <img src="assets/img/gdgLogo.svg" alt="GDG On Campus Doğuş University"
-                                style="width:100%; height:100%; object-fit:contain; display:block;" />
-                        </a>
-                        <p class="games__description">
-                            This website is the official page of GDG On Campus Doğuş University, a community that brings
-                            together students interested in game development. It serves as a platform for sharing
-                            knowledge, resources, and organizing events to foster learning and collaboration.
-                        </p>
-                    </div>
+                <!-- Maze Slide -->
+                <div class="games__item">
+                    <iframe width="100%" height="180"
+                        src="https://www.youtube.com/embed/-5jq1QrIfM0?si=4t94Bc1wr1SJBi9n" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <p class="games__description">Maze Slide is an engaging mobile puzzle game where players navigate
+                        complex mazes using unique ball types and strategic power-ups to find the path to the exit.</p>
                 </div>
 
-                <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem;">
-                    <!-- Check and Defend (YouTube) -->
-                    <div class="games__item" style="flex: 1 1 45%; min-width: 250px; max-width: 48%;">
-                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/a3mRolhcuOs"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <p class="games__description">Check And Defend is a chess tower-defense where every wave randomly flips you between defender and attacker. Survive ten waves — defend when you must, attack when you can.</p>
-                        <a href="https://yunusturna.itch.io/checkanddefend" target="_blank" class="games__link">Play on itch.io →</a>
-                    </div>
-
-                    <!-- Madis (YouTube) -->
-                    <div class="games__item" style="flex: 1 1 45%; min-width: 250px; max-width: 48%;">
-                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/NfvTAS4PJyU"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <p class="games__description">Madis is a strategy game where you roll the dice and drop the mask. A dark and atmospheric experience with strategic depth.</p>
-                        <a href="https://yunusturna.itch.io/madis" target="_blank" class="games__link">Play on itch.io →</a>
-                    </div>
+                <!-- Blocktopia -->
+                <div class="games__item">
+                    <iframe width="100%" height="180" src="https://www.youtube.com/embed/b6tLIQdHB-U" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <p class="games__description">Blocktopia is a vibrant and humorous clicker city-builder game.
+                        Gather resources, build your town, and defend it against nightly raids! In this chaotic world
+                        where justice prevails, survive and dive into a fun city-building experience!</p>
                 </div>
 
-                <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem;">
-                    <!-- MergeSquare (Image placeholder + itch.io link) -->
-                    <div class="games__item" style="flex: 1 1 45%; min-width: 250px; max-width: 48%;">
-                        <a href="https://yunusturna.itch.io/mergesquare" target="_blank"
-                            style="display:block; width:100%; height:180px;">
-                            <img src="assets/img/mergesquare.jpeg" alt="MergeSquare"
-                                style="width:100%; height:100%; object-fit:cover; display:block; border-radius: 4px;" />
-                        </a>
-                        <p class="games__description">Merge Square is a satisfying, bubbly 2D mobile puzzle game where you reconstruct scrambled images within a move limit. Puzzles increase in difficulty but result in satisfying patterns.</p>
-                        <a href="https://yunusturna.itch.io/mergesquare" target="_blank" class="games__link">Play on itch.io →</a>
-                    </div>
+                <!-- Kiki -->
+                <div class="games__item">
+                    <iframe width="100%" height="180" src="https://www.youtube.com/embed/P-Es68XFPlU" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <p class="games__description">Kiki is a single player story driven action adventure game with
+                        survival elements where you will control Kiki as she goes into a journey to save her village
+                        from years of curse in a fantastic world.</p>
+                </div>
 
-                    <!-- MonoShot (Image placeholder + itch.io link) -->
-                    <div class="games__item" style="flex: 1 1 45%; min-width: 250px; max-width: 48%;">
-                        <a href="https://yunusturna.itch.io/monoshot" target="_blank"
-                            style="display:block; width:100%; height:180px;">
-                            <img src="assets/img/monoshot.jpeg" alt="MonoShot"
-                                style="width:100%; height:100%; object-fit:cover; display:block; border-radius: 4px;" />
-                        </a>
-                        <p class="games__description">MonoShot is a retro style mobile game where the goal is to drag the ball to shoot it at the goal. Levels get progressively harder with only 3 throws allowed per level.</p>
-                        <a href="https://yunusturna.itch.io/monoshot" target="_blank" class="games__link">Play on itch.io →</a>
-                    </div>
+                <!-- CherryChasers -->
+                <div class="games__item">
+                    <iframe width="100%" height="180" src="https://www.youtube.com/embed/ivb7oaPXNc8" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <p class="games__description">
+                        CherryChasers is an online party game with 5 maps, each featuring unique mechanics. This game
+                        offers exciting, fast-paced action as players compete using different characters, with the
+                        mechanics of each map creating new challenges.
+                    </p>
+                </div>
+
+                <!-- GDG Website -->
+                <div class="games__item">
+                    <a href="https://gdgoncampusdou.com.tr/" target="_blank"
+                        style="display:block; width:100%; height:180px;">
+                        <img src="assets/img/gdgLogo.svg" alt="GDG On Campus Doğuş University"
+                            style="width:100%; height:100%; object-fit:contain; display:block;" />
+                    </a>
+                    <p class="games__description">
+                        This website is the official page of GDG On Campus Doğuş University, a community that brings
+                        together students interested in game development. It serves as a platform for sharing
+                        knowledge, resources, and organizing events to foster learning and collaboration.
+                    </p>
+                </div>
+
+                <!-- Check and Defend -->
+                <div class="games__item">
+                    <iframe width="100%" height="180" src="https://www.youtube.com/embed/a3mRolhcuOs" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <p class="games__description">Check And Defend is a chess tower-defense where every wave randomly
+                        flips you between defender and attacker. Survive ten waves — defend when you must, attack when
+                        you can.</p>
+                    <a href="https://yunusturna.itch.io/checkanddefend" target="_blank" class="games__link">Play on
+                        itch.io →</a>
+                </div>
+
+                <!-- Madis -->
+                <div class="games__item">
+                    <iframe width="100%" height="180" src="https://www.youtube.com/embed/NfvTAS4PJyU" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <p class="games__description">Madis is a strategy game where you roll the dice and drop the mask. A
+                        dark and atmospheric experience with strategic depth.</p>
+                    <a href="https://yunusturna.itch.io/madis" target="_blank" class="games__link">Play on itch.io →</a>
+                </div>
+
+                <!-- MergeSquare -->
+                <div class="games__item">
+                    <a href="https://yunusturna.itch.io/mergesquare" target="_blank"
+                        style="display:block; width:100%; height:180px;">
+                        <img src="assets/img/mergesquare.jpeg" alt="MergeSquare"
+                            style="width:100%; height:100%; object-fit:cover; display:block; border-radius: 4px;" />
+                    </a>
+                    <p class="games__description">Merge Square is a satisfying, bubbly 2D mobile puzzle game where you
+                        reconstruct scrambled images within a move limit. Puzzles increase in difficulty but result in
+                        satisfying patterns.</p>
+                    <a href="https://yunusturna.itch.io/mergesquare" target="_blank" class="games__link">Play on itch.io
+                        →</a>
+                </div>
+
+                <!-- MonoShot -->
+                <div class="games__item">
+                    <a href="https://yunusturna.itch.io/monoshot" target="_blank"
+                        style="display:block; width:100%; height:180px;">
+                        <img src="assets/img/monoshot.jpeg" alt="MonoShot"
+                            style="width:100%; height:100%; object-fit:cover; display:block; border-radius: 4px;" />
+                    </a>
+                    <p class="games__description">MonoShot is a retro style mobile game where the goal is to drag the
+                        ball to shoot it at the goal. Levels get progressively harder with only 3 throws allowed per
+                        level.</p>
+                    <a href="https://yunusturna.itch.io/monoshot" target="_blank" class="games__link">Play on itch.io
+                        →</a>
                 </div>
             </div>
         </div>
 
-        <!-- App Projects -->
-        <h3 class="projects__subtitle">📱 App Projects</h3>
-        <div class="games__container bd-grid" style="display: flex; flex-wrap: wrap; gap: 2rem;">
-            <div style="display: flex; flex-direction: column; width: 100%;">
-                <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
-                    <!-- SelfSporTrack -->
-                    <div class="games__item" style="flex: 1 1 45%; min-width: 250px; max-width: 48%;">
-                        <div class="carousel" id="sportrack-carousel">
-                            <button class="carousel__btn carousel__btn--left" onclick="changeSlide('sportrack-carousel', -1)">&#9664;</button>
-                            <div class="carousel__track">
-                                <img src="assets/img/SportTrackerApp/sportrack_1.jpeg" alt="SelfSporTrack Screenshot 1" class="carousel__slide carousel__slide--active" />
-                                <img src="assets/img/SportTrackerApp/sportrack_2.jpeg" alt="SelfSporTrack Screenshot 2" class="carousel__slide" />
-                                <img src="assets/img/SportTrackerApp/sportrack_3.jpeg" alt="SelfSporTrack Screenshot 3" class="carousel__slide" />
-                                <img src="assets/img/SportTrackerApp/sportrack_4.jpeg" alt="SelfSporTrack Screenshot 4" class="carousel__slide" />
-                                <img src="assets/img/SportTrackerApp/sportrack_5.jpeg" alt="SelfSporTrack Screenshot 5" class="carousel__slide" />
-                                <img src="assets/img/SportTrackerApp/sportrack_6.jpeg" alt="SelfSporTrack Screenshot 6" class="carousel__slide" />
+        <!-- App Projects Content -->
+        <div id="app-projects" class="projects__content">
+            <div class="games__container bd-grid">
+                <!-- SelfSporTrack -->
+                <div class="games__item">
+                    <div class="app-showcase">
+                        <button class="carousel__btn" onclick="changeSlide('sportrack-carousel', -1)">&#9664;</button>
+                        <div class="phone-mockup">
+                            <div class="carousel" id="sportrack-carousel">
+                                <div class="carousel__track">
+                                    <img src="assets/img/SportTrackerApp/sportrack_1.jpeg"
+                                        alt="SelfSporTrack Screenshot 1"
+                                        class="carousel__slide carousel__slide--active" />
+                                    <img src="assets/img/SportTrackerApp/sportrack_2.jpeg"
+                                        alt="SelfSporTrack Screenshot 2" class="carousel__slide" />
+                                    <img src="assets/img/SportTrackerApp/sportrack_3.jpeg"
+                                        alt="SelfSporTrack Screenshot 3" class="carousel__slide" />
+                                    <img src="assets/img/SportTrackerApp/sportrack_4.jpeg"
+                                        alt="SelfSporTrack Screenshot 4" class="carousel__slide" />
+                                    <img src="assets/img/SportTrackerApp/sportrack_5.jpeg"
+                                        alt="SelfSporTrack Screenshot 5" class="carousel__slide" />
+                                    <img src="assets/img/SportTrackerApp/sportrack_6.jpeg"
+                                        alt="SelfSporTrack Screenshot 6" class="carousel__slide" />
+                                </div>
                             </div>
-                            <button class="carousel__btn carousel__btn--right" onclick="changeSlide('sportrack-carousel', 1)">&#9654;</button>
                         </div>
-                        <p class="games__description">SelfSporTrack is a comprehensive fitness tracking app built with Flutter. It features workout logging, customizable workout programs, meal planning with calorie tracking, weight and body measurement history with chart visualizations, water intake tracking, and a calendar overview with local data storage and dark mode support.</p>
+                        <button class="carousel__btn" onclick="changeSlide('sportrack-carousel', 1)">&#9654;</button>
                     </div>
+                    <p class="games__description">SelfSporTrack is a comprehensive fitness tracking app built with
+                        Flutter. It features workout logging, customizable workout programs, meal planning with calorie
+                        tracking, weight and body measurement history with chart visualizations, water intake tracking,
+                        and a calendar overview with local data storage and dark mode support.</p>
+                </div>
 
-                    <!-- Smart Dog Collar -->
-                    <div class="games__item" style="flex: 1 1 45%; min-width: 250px; max-width: 48%;">
-                        <div class="carousel" id="dogcollar-carousel">
-                            <button class="carousel__btn carousel__btn--left" onclick="changeSlide('dogcollar-carousel', -1)">&#9664;</button>
-                            <div class="carousel__track">
-                                <img src="assets/img/DogCollarApp/dogcollar_1.jpeg" alt="Smart Dog Collar Screenshot 1" class="carousel__slide carousel__slide--active" />
-                                <img src="assets/img/DogCollarApp/dogcollar_2.jpeg" alt="Smart Dog Collar Screenshot 2" class="carousel__slide" />
-                                <img src="assets/img/DogCollarApp/dogcollar_3.jpeg" alt="Smart Dog Collar Screenshot 3" class="carousel__slide" />
-                                <img src="assets/img/DogCollarApp/dogcollar_4.jpeg" alt="Smart Dog Collar Screenshot 4" class="carousel__slide" />
+                <!-- Smart Dog Collar -->
+                <div class="games__item">
+                    <div class="app-showcase">
+                        <button class="carousel__btn" onclick="changeSlide('dogcollar-carousel', -1)">&#9664;</button>
+                        <div class="phone-mockup">
+                            <div class="carousel" id="dogcollar-carousel">
+                                <div class="carousel__track">
+                                    <img src="assets/img/DogCollarApp/dogcollar_1.jpeg"
+                                        alt="Smart Dog Collar Screenshot 1"
+                                        class="carousel__slide carousel__slide--active" />
+                                    <img src="assets/img/DogCollarApp/dogcollar_2.jpeg"
+                                        alt="Smart Dog Collar Screenshot 2" class="carousel__slide" />
+                                    <img src="assets/img/DogCollarApp/dogcollar_3.jpeg"
+                                        alt="Smart Dog Collar Screenshot 3" class="carousel__slide" />
+                                    <img src="assets/img/DogCollarApp/dogcollar_4.jpeg"
+                                        alt="Smart Dog Collar Screenshot 4" class="carousel__slide" />
+                                </div>
                             </div>
-                            <button class="carousel__btn carousel__btn--right" onclick="changeSlide('dogcollar-carousel', 1)">&#9654;</button>
                         </div>
-                        <p class="games__description">Smart Dog Collar is our capstone/graduation IoT project. The hardware side uses an ESP32 microcontroller paired with an MPU6050 accelerometer/gyroscope for motion and activity detection, and a NEO-6M GPS module for real-time location tracking. The Flutter companion app connects to the collar via Bluetooth Low Energy (BLE), displaying live GPS data on an interactive map, logging walking sessions with distance and duration stats, monitoring activity levels with chart visualizations, and managing dog profiles — all backed by Firebase authentication and cloud storage.</p>
+                        <button class="carousel__btn" onclick="changeSlide('dogcollar-carousel', 1)">&#9654;</button>
                     </div>
+                    <p class="games__description">Smart Dog Collar is our capstone/graduation IoT project. The hardware
+                        side uses an ESP32 microcontroller paired with an MPU6050 accelerometer/gyroscope for motion and
+                        activity detection, and a NEO-6M GPS module for real-time location tracking. The Flutter
+                        companion app connects to the collar via Bluetooth Low Energy (BLE), displaying live GPS data on
+                        an interactive map, logging walking sessions with distance and duration stats, monitoring
+                        activity levels with chart visualizations, and managing dog profiles — all backed by Firebase
+                        authentication and cloud storage.</p>
                 </div>
             </div>
         </div>
@@ -388,6 +443,10 @@
             <a href="https://github.com/yunusturna" target="_blank" class="footer__icon">
                 <i class='bx bxl-github'></i>
             </a>
+            <!-- Itch.io -->
+            <a href="https://yunusturna.itch.io/" target="_blank" class="footer__icon">
+                <img src="assets/img/itch-io-logo.png" alt="Itch.io Logo" class="social-icon-img" />
+            </a>
         </div>
     </footer>
 
@@ -424,6 +483,27 @@
             if (newIndex >= slides.length) newIndex = 0;
 
             slides[newIndex].classList.add('carousel__slide--active');
+        }
+
+        // Tab switching navigation
+        function switchTab(tabId) {
+            // Remove active classes from all contents
+            const contents = document.querySelectorAll('.projects__content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active classes from all tab buttons
+            const buttons = document.querySelectorAll('.tab__btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Add active class to target content
+            document.getElementById(tabId).classList.add('active');
+
+            // Find clicked button and add active class
+            event.currentTarget.classList.add('active');
         }
     </script>
 </body>
