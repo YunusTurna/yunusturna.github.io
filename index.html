@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <canvas id="particle-canvas"></canvas>
     <!--===== HEADER =====-->
     <header class="l-header">
         <nav class="nav bd-grid">
@@ -87,25 +88,25 @@
         <div class="skills__container bd-grid">
             <div class="skills__grid">
                 <!-- Unity -->
-                <div class="skills__box">
+                <div class="skills__box skills__box--unity">
                     <img src="assets/img/unityLogo.png" alt="Unity Logo" class="skills__icon" />
                     <span class="skills__name">Unity</span>
                 </div>
 
                 <!-- C# -->
-                <div class="skills__box">
+                <div class="skills__box skills__box--csharp">
                     <img src="assets/img/csharpLogo.png" alt="C# Logo" class="skills__icon" />
                     <span class="skills__name">C#</span>
                 </div>
 
                 <!-- Flutter -->
-                <div class="skills__box">
+                <div class="skills__box skills__box--flutter">
                     <img src="assets/img/flutterLogo.svg" alt="Flutter Logo" class="skills__icon" />
                     <span class="skills__name">Flutter</span>
                 </div>
 
                 <!-- Dart -->
-                <div class="skills__box">
+                <div class="skills__box skills__box--dart">
                     <img src="assets/img/dart-language.png" alt="Dart Logo" class="skills__icon" />
                     <span class="skills__name">Dart</span>
                 </div>
@@ -117,18 +118,8 @@
     <section class="games section" id="games">
         <h2 class="section-title">Projects</h2>
 
-        <!-- Projects Tabs -->
-        <div class="projects__tabs">
-            <button class="tab__btn active" onclick="switchTab('game-projects')">
-                🎮 Game Projects
-            </button>
-            <button class="tab__btn" onclick="switchTab('app-projects')">
-                📱 Mobile Apps
-            </button>
-        </div>
-
-        <!-- Game Projects Content -->
-        <div id="game-projects" class="projects__content active">
+        <h3 class="projects__subtitle">🎮 Game Projects</h3>
+        <div id="game-projects">
             <div class="games__container bd-grid">
                 <!-- Sixth Chamber -->
                 <div class="games__item">
@@ -248,8 +239,8 @@
             </div>
         </div>
 
-        <!-- App Projects Content -->
-        <div id="app-projects" class="projects__content">
+        <h3 class="projects__subtitle">📱 Mobile Apps</h3>
+        <div id="app-projects">
             <div class="games__container bd-grid">
                 <!-- SelfSporTrack -->
                 <div class="games__item">
@@ -276,10 +267,13 @@
                         </div>
                         <button class="carousel__btn" onclick="changeSlide('sportrack-carousel', 1)">&#9654;</button>
                     </div>
-                    <p class="games__description">SelfSporTrack is a comprehensive fitness tracking app built with
-                        Flutter. It features workout logging, customizable workout programs, meal planning with calorie
-                        tracking, weight and body measurement history with chart visualizations, water intake tracking,
-                        and a calendar overview with local data storage and dark mode support.</p>
+                    <h4 style="font-weight: 600; color: #fff; margin-top: 0.5rem;">SelfSporTrack</h4>
+                    <ul class="project__bullet-list">
+                        <li>Developed a cross-platform fitness tracking app using Flutter.</li>
+                        <li>Features digital workout logging with customizable programs.</li>
+                        <li>Includes weight history tracking, meal planning, and water intake logs.</li>
+                        <li>Provides local storage support and a toggleable dark mode.</li>
+                    </ul>
                 </div>
 
                 <!-- Smart Dog Collar -->
@@ -303,13 +297,13 @@
                         </div>
                         <button class="carousel__btn" onclick="changeSlide('dogcollar-carousel', 1)">&#9654;</button>
                     </div>
-                    <p class="games__description">Smart Dog Collar is our capstone/graduation IoT project. The hardware
-                        side uses an ESP32 microcontroller paired with an MPU6050 accelerometer/gyroscope for motion and
-                        activity detection, and a NEO-6M GPS module for real-time location tracking. The Flutter
-                        companion app connects to the collar via Bluetooth Low Energy (BLE), displaying live GPS data on
-                        an interactive map, logging walking sessions with distance and duration stats, monitoring
-                        activity levels with chart visualizations, and managing dog profiles — all backed by Firebase
-                        authentication and cloud storage.</p>
+                    <h4 style="font-weight: 600; color: #fff; margin-top: 0.5rem;">Smart Dog Collar</h4>
+                    <ul class="project__bullet-list">
+                        <li>Capstone IoT graduation project containing hardware and mobile application parts.</li>
+                        <li>Uses ESP32, MPU6050 (accelerometer/gyroscope), and NEO-6M GPS modules.</li>
+                        <li>Flutter app connects via Bluetooth Low Energy (BLE) to stream active location metrics.</li>
+                        <li>Features session logging, activity graph visualizations, and Firebase cloud database sync.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -453,8 +447,9 @@
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
 
-    <!-- Optional: simple nav toggle script -->
+    <!-- Navigation & Animations & Particle Canvas Script -->
     <script>
+        // Nav Menu Toggle
         const navToggle = document.getElementById('nav-toggle');
         const navMenu = document.getElementById('nav-menu');
 
@@ -485,26 +480,155 @@
             slides[newIndex].classList.add('carousel__slide--active');
         }
 
-        // Tab switching navigation
-        function switchTab(tabId) {
-            // Remove active classes from all contents
-            const contents = document.querySelectorAll('.projects__content');
-            contents.forEach(content => {
-                content.classList.remove('active');
-            });
 
-            // Remove active classes from all tab buttons
-            const buttons = document.querySelectorAll('.tab__btn');
-            buttons.forEach(btn => {
-                btn.classList.remove('active');
-            });
 
-            // Add active class to target content
-            document.getElementById(tabId).classList.add('active');
+        // Interactive Particle Canvas Background
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let mouse = { x: null, y: null, radius: 150 };
 
-            // Find clicked button and add active class
-            event.currentTarget.classList.add('active');
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
         }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.x;
+            mouse.y = e.y;
+        });
+
+        window.addEventListener('mouseout', () => {
+            mouse.x = null;
+            mouse.y = null;
+        });
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.radius = Math.random() * 2 + 1;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(99, 102, 241, 0.3)';
+                ctx.fill();
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0 || this.x > canvas.width) this.vx = -this.vx;
+                if (this.y < 0 || this.y > canvas.height) this.vy = -this.vy;
+
+                // Mouse interaction
+                if (mouse.x !== null && mouse.y !== null) {
+                    let dx = mouse.x - this.x;
+                    let dy = mouse.y - this.y;
+                    let dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < mouse.radius) {
+                        let force = (mouse.radius - dist) / mouse.radius;
+                        this.x -= dx / dist * force * 1.5;
+                        this.y -= dy / dist * force * 1.5;
+                    }
+                }
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const particleCount = Math.floor((canvas.width * canvas.height) / 16000);
+            for (let i = 0; i < Math.min(particleCount, 100); i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+
+            // Draw connecting lines
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    let dx = particles[i].x - particles[j].x;
+                    let dy = particles[i].y - particles[j].y;
+                    let dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < 100) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        let opacity = (100 - dist) / 100 * 0.12;
+                        ctx.strokeStyle = `rgba(99, 102, 241, ${opacity})`;
+                        ctx.lineWidth = 0.8;
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+        initParticles();
+        animate();
+        window.addEventListener('resize', initParticles);
+
+        // Scrollspy Active Navigation Link Highlight
+        const sections = document.querySelectorAll('section[id]');
+        
+        function scrollActive() {
+            const scrollY = window.pageYOffset;
+
+            sections.forEach(current => {
+                const sectionHeight = current.offsetHeight;
+                const sectionTop = current.offsetTop - 58;
+                const sectionId = current.getAttribute('id');
+                const navLink = document.querySelector(`.nav__menu a[href*=${sectionId}]`);
+
+                if (navLink) {
+                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                        navLink.classList.add('active-link');
+                    } else {
+                        navLink.classList.remove('active-link');
+                    }
+                }
+            });
+        }
+        window.addEventListener('scroll', scrollActive);
+
+        // Scroll Reveal Animations
+        const sr = ScrollReveal({
+            origin: 'top',
+            distance: '60px',
+            duration: 1200,
+            delay: 100,
+            reset: false
+        });
+
+        sr.reveal('.home__data', { delay: 100 });
+        sr.reveal('.home__social', { delay: 200, origin: 'bottom' });
+        
+        sr.reveal('.about__img', { delay: 100, origin: 'left' });
+        sr.reveal('.about__subtitle', { delay: 100, origin: 'right' });
+        sr.reveal('.about__text', { delay: 200, origin: 'right' });
+
+        sr.reveal('.skills__box', { interval: 80 });
+
+        sr.reveal('.projects__subtitle', { delay: 100 });
+        sr.reveal('.games__item', { interval: 80 });
+
+        sr.reveal('.experience__item', { interval: 100, origin: 'left' });
+        sr.reveal('.education__item', { interval: 100, origin: 'right' });
+        
+        sr.reveal('.contact__details-box', { delay: 100, scale: 0.95 });
     </script>
 </body>
 
