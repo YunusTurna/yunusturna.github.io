@@ -353,6 +353,15 @@ img {
 
 
 /* ===== games =====*/
+.projects__subtitle {
+  font-size: 1.3rem;
+  color: var(--second-color);
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: var(--font-semi);
+}
+
 .games__container {
   row-gap: 2rem;
 }
@@ -369,6 +378,88 @@ img {
 
 .games__img img:hover {
   transform: scale(1.1);
+}
+
+.games__description {
+  margin-top: 0.75rem;
+  font-size: var(--normal-font-size);
+  color: var(--second-color);
+  line-height: 1.6;
+}
+
+.games__link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: var(--first-color);
+  font-weight: var(--font-semi);
+  font-size: var(--normal-font-size);
+  transition: 0.3s;
+}
+
+.games__link:hover {
+  color: var(--second-color);
+  transform: translateX(4px);
+}
+
+/* ===== CAROUSEL =====*/
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: #f0f0f0;
+}
+
+.carousel__track {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel__slide {
+  display: none;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.carousel__slide--active {
+  display: block;
+}
+
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.6rem 0.7rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 4px;
+  transition: background 0.3s;
+  line-height: 1;
+}
+
+.carousel__btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.carousel__btn--left {
+  left: 6px;
+}
+
+.carousel__btn--right {
+  right: 6px;
 }
 
 .experiences__container {

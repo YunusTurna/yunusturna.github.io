@@ -97,6 +97,9 @@
     <!--===== GAMES / PROJECTS =====-->
     <section class="games section" id="games">
         <h2 class="section-title">Projects</h2>
+
+        <!-- Game Projects -->
+        <h3 class="projects__subtitle">🎮 Game Projects</h3>
         <div class="games__container bd-grid" style="display: flex; flex-wrap: wrap; gap: 2rem;">
             <div style="display: flex; flex-direction: column; width: 100%;">
                 <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
@@ -167,6 +170,92 @@
                         </p>
                     </div>
                 </div>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem;">
+                    <!-- Check and Defend (YouTube) -->
+                    <div class="games__item" style="flex: 1 1 45%; min-width: 250px; max-width: 48%;">
+                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/a3mRolhcuOs"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <p class="games__description">Check And Defend is a chess tower-defense where every wave randomly flips you between defender and attacker. Survive ten waves — defend when you must, attack when you can.</p>
+                        <a href="https://yunusturna.itch.io/checkanddefend" target="_blank" class="games__link">Play on itch.io →</a>
+                    </div>
+
+                    <!-- Madis (YouTube) -->
+                    <div class="games__item" style="flex: 1 1 45%; min-width: 250px; max-width: 48%;">
+                        <iframe width="100%" height="180" src="https://www.youtube.com/embed/NfvTAS4PJyU"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <p class="games__description">Madis is a strategy game where you roll the dice and drop the mask. A dark and atmospheric experience with strategic depth.</p>
+                        <a href="https://yunusturna.itch.io/madis" target="_blank" class="games__link">Play on itch.io →</a>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem;">
+                    <!-- MergeSquare (Image placeholder + itch.io link) -->
+                    <div class="games__item" style="flex: 1 1 45%; min-width: 250px; max-width: 48%;">
+                        <a href="https://yunusturna.itch.io/mergesquare" target="_blank"
+                            style="display:block; width:100%; height:180px;">
+                            <img src="assets/img/mergesquare.jpeg" alt="MergeSquare"
+                                style="width:100%; height:100%; object-fit:cover; display:block; border-radius: 4px;" />
+                        </a>
+                        <p class="games__description">Merge Square is a satisfying, bubbly 2D mobile puzzle game where you reconstruct scrambled images within a move limit. Puzzles increase in difficulty but result in satisfying patterns.</p>
+                        <a href="https://yunusturna.itch.io/mergesquare" target="_blank" class="games__link">Play on itch.io →</a>
+                    </div>
+
+                    <!-- MonoShot (Image placeholder + itch.io link) -->
+                    <div class="games__item" style="flex: 1 1 45%; min-width: 250px; max-width: 48%;">
+                        <a href="https://yunusturna.itch.io/monoshot" target="_blank"
+                            style="display:block; width:100%; height:180px;">
+                            <img src="assets/img/monoshot.jpeg" alt="MonoShot"
+                                style="width:100%; height:100%; object-fit:cover; display:block; border-radius: 4px;" />
+                        </a>
+                        <p class="games__description">MonoShot is a retro style mobile game where the goal is to drag the ball to shoot it at the goal. Levels get progressively harder with only 3 throws allowed per level.</p>
+                        <a href="https://yunusturna.itch.io/monoshot" target="_blank" class="games__link">Play on itch.io →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- App Projects -->
+        <h3 class="projects__subtitle">📱 App Projects</h3>
+        <div class="games__container bd-grid" style="display: flex; flex-wrap: wrap; gap: 2rem;">
+            <div style="display: flex; flex-direction: column; width: 100%;">
+                <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+                    <!-- SelfSporTrack -->
+                    <div class="games__item" style="flex: 1 1 45%; min-width: 250px; max-width: 48%;">
+                        <div class="carousel" id="sportrack-carousel">
+                            <button class="carousel__btn carousel__btn--left" onclick="changeSlide('sportrack-carousel', -1)">&#9664;</button>
+                            <div class="carousel__track">
+                                <img src="assets/img/SportTrackerApp/sportrack_1.jpeg" alt="SelfSporTrack Screenshot 1" class="carousel__slide carousel__slide--active" />
+                                <img src="assets/img/SportTrackerApp/sportrack_2.jpeg" alt="SelfSporTrack Screenshot 2" class="carousel__slide" />
+                                <img src="assets/img/SportTrackerApp/sportrack_3.jpeg" alt="SelfSporTrack Screenshot 3" class="carousel__slide" />
+                                <img src="assets/img/SportTrackerApp/sportrack_4.jpeg" alt="SelfSporTrack Screenshot 4" class="carousel__slide" />
+                                <img src="assets/img/SportTrackerApp/sportrack_5.jpeg" alt="SelfSporTrack Screenshot 5" class="carousel__slide" />
+                                <img src="assets/img/SportTrackerApp/sportrack_6.jpeg" alt="SelfSporTrack Screenshot 6" class="carousel__slide" />
+                            </div>
+                            <button class="carousel__btn carousel__btn--right" onclick="changeSlide('sportrack-carousel', 1)">&#9654;</button>
+                        </div>
+                        <p class="games__description">SelfSporTrack is a comprehensive fitness tracking app built with Flutter. It features workout logging, customizable workout programs, meal planning with calorie tracking, weight and body measurement history with chart visualizations, water intake tracking, and a calendar overview with local data storage and dark mode support.</p>
+                    </div>
+
+                    <!-- Smart Dog Collar -->
+                    <div class="games__item" style="flex: 1 1 45%; min-width: 250px; max-width: 48%;">
+                        <div class="carousel" id="dogcollar-carousel">
+                            <button class="carousel__btn carousel__btn--left" onclick="changeSlide('dogcollar-carousel', -1)">&#9664;</button>
+                            <div class="carousel__track">
+                                <img src="assets/img/DogCollarApp/dogcollar_1.jpeg" alt="Smart Dog Collar Screenshot 1" class="carousel__slide carousel__slide--active" />
+                                <img src="assets/img/DogCollarApp/dogcollar_2.jpeg" alt="Smart Dog Collar Screenshot 2" class="carousel__slide" />
+                                <img src="assets/img/DogCollarApp/dogcollar_3.jpeg" alt="Smart Dog Collar Screenshot 3" class="carousel__slide" />
+                                <img src="assets/img/DogCollarApp/dogcollar_4.jpeg" alt="Smart Dog Collar Screenshot 4" class="carousel__slide" />
+                            </div>
+                            <button class="carousel__btn carousel__btn--right" onclick="changeSlide('dogcollar-carousel', 1)">&#9654;</button>
+                        </div>
+                        <p class="games__description">Smart Dog Collar is our capstone/graduation IoT project. The hardware side uses an ESP32 microcontroller paired with an MPU6050 accelerometer/gyroscope for motion and activity detection, and a NEO-6M GPS module for real-time location tracking. The Flutter companion app connects to the collar via Bluetooth Low Energy (BLE), displaying live GPS data on an interactive map, logging walking sessions with distance and duration stats, monitoring activity levels with chart visualizations, and managing dog profiles — all backed by Firebase authentication and cloud storage.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -175,6 +264,14 @@
     <section class="experiences section" id="experience">
         <h2 class="section-title">Experience</h2>
         <div class="experiences__container bd-grid">
+            <div class="experience__item">
+                <img src="assets/img/arvisgameslogo.jpeg" alt="Arvis Games Logo" class="experience__logo" />
+                <div class="experience__details">
+                    <h3 class="experience__title">Arvis Games</h3>
+                    <span class="experience__subtitle">Intern Game Developer</span>
+                </div>
+            </div>
+
             <div class="experience__item">
                 <img src="assets/img/UdoLogo.jpg" alt="UDO" class="experience__logo" />
                 <div class="experience__details">
@@ -306,6 +403,27 @@
             navToggle.addEventListener('click', () => {
                 navMenu.classList.toggle('show-menu');
             });
+        }
+
+        // Carousel slide navigation
+        function changeSlide(carouselId, direction) {
+            const carousel = document.getElementById(carouselId);
+            const slides = carousel.querySelectorAll('.carousel__slide');
+            let activeIndex = 0;
+
+            slides.forEach((slide, i) => {
+                if (slide.classList.contains('carousel__slide--active')) {
+                    activeIndex = i;
+                }
+            });
+
+            slides[activeIndex].classList.remove('carousel__slide--active');
+
+            let newIndex = activeIndex + direction;
+            if (newIndex < 0) newIndex = slides.length - 1;
+            if (newIndex >= slides.length) newIndex = 0;
+
+            slides[newIndex].classList.add('carousel__slide--active');
         }
     </script>
 </body>
