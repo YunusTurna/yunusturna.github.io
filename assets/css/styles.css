@@ -244,13 +244,83 @@ img {
   cursor: pointer;
 }
 
+.nav__link--cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--first-color) !important;
+  font-weight: 600;
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  background: rgba(99, 102, 241, 0.08);
+  transition: all 0.3s ease;
+}
+
+.nav__link--cv:hover {
+  background: var(--first-color);
+  color: #fff !important;
+  border-color: var(--first-color);
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.5);
+  transform: translateY(-1px);
+}
+
+.nav__link--cv::after {
+  display: none !important;
+}
+
+/*===== BUTTONS =====*/
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: var(--normal-font-size);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  text-decoration: none;
+  font-family: var(--body-font);
+}
+
+.button--primary {
+  background: linear-gradient(135deg, var(--first-color) 0%, #818cf8 100%);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.button--primary:hover {
+  background: linear-gradient(135deg, var(--first-color-alt) 0%, var(--first-color) 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+  color: #fff;
+}
+
+.button--secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(8px);
+}
+
+.button--secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--border-hover);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
 /*===== HOME =====*/
 .home {
-  height: calc(100vh - var(--header-height));
+  min-height: calc(100vh - var(--header-height));
+  height: auto;
   display: flex;
   align-items: center;
   position: relative;
-  row-gap: 5rem;
+  row-gap: 3rem;
   padding: 4rem 0 5rem;
   overflow: hidden;
 }
@@ -288,7 +358,7 @@ img {
 .home__title {
   font-size: var(--big-font-size);
   line-height: 1.2;
-  margin-bottom: var(--mb-5);
+  margin-bottom: 1.5rem;
 }
 
 .home__title-color {
@@ -296,6 +366,13 @@ img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;
+}
+
+.home__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .home__social {
@@ -351,6 +428,16 @@ img {
 .about__text {
   max-width: 600px;
   font-size: var(--normal-font-size);
+}
+
+.about__buttons {
+  margin-top: 1.75rem;
+}
+
+.contact__cv-action {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
 }
 
 /*===== SKILLS =====*/
