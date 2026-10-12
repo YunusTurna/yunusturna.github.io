@@ -4,35 +4,587 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahmet Yunus Turna</title>
+    <meta name="description"
+        content="Ahmet Yunus Turna – Game Developer (Unity & C#). Worked on UFC: Manager, 1st place among 300+ teams, game jam winner." />
+    <meta name="theme-color" content="#0b0c0f" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/img/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <!-- =====BOX ICONS===== -->
-    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
-    <title>Yunus Turna Portfolio</title>
 </head>
 
 <body>
-    <canvas id="particle-canvas"></canvas>
+    <!--===== HEADER =====-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav__logo" aria-label="Home">
+                Ahmet Yunus Turna
+            </a>
 
-    <!-- Placeholders for dynamically loaded sections -->
-    <div id="header-container"></div>
-    
-    <main class="l-main">
-        <div id="home-container"></div>
-        <div id="about-container"></div>
-        <div id="skills-container"></div>
-        <div id="games-container"></div>
-        <div id="experience-container"></div>
-        <div id="education-container"></div>
-        <div id="contact-container"></div>
+            <ul class="nav__menu" id="nav-menu">
+                <li><a href="#games" class="nav__link">Games</a></li>
+                <li><a href="#experience" class="nav__link">Experience</a></li>
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
+                <li><a href="AhmetYunusTurnaCV.pdf" target="_blank" rel="noopener" class="btn btn--small btn--accent">
+                        <i class='bx bx-download'></i> CV</a></li>
+            </ul>
+
+            <button class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <i class='bx bx-menu'></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!--===== HERO =====-->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero__art reveal" aria-hidden="true">
+                    <div class="art art--a">
+                        <img src="https://i.ytimg.com/vi/ivb7oaPXNc8/hqdefault.jpg" alt="" />
+                        <span class="art__label">1st / 300+</span>
+                    </div>
+                    <div class="art art--phone">
+                        <img src="assets/img/UFCManager/ufc_3.jpg" alt="" />
+                    </div>
+                    <div class="art art--b">
+                        <img src="https://i.ytimg.com/vi/a3mRolhcuOs/hqdefault.jpg" alt="" />
+                        <span class="art__label">Jam winner</span>
+                    </div>
+                </div>
+
+                <p class="eyebrow reveal"><span class="dot"></span> Game Developer · Unity &amp; C#</p>
+
+                <h1 class="hero__title reveal">Ahmet Yunus<br><span class="hero__title-accent">Turna</span></h1>
+
+                <p class="hero__lead reveal">
+                    I build games in Unity and C#. My latest work, <strong>UFC: Manager</strong>, is live on the
+                    App Store.
+                </p>
+
+                <div class="hero__actions reveal">
+                    <a href="#games" class="btn btn--accent"><i class='bx bx-joystick'></i> See my games</a>
+                    <a href="AhmetYunusTurnaCV.pdf" target="_blank" rel="noopener" class="btn btn--ghost">
+                        <i class='bx bx-file'></i> Download CV</a>
+                    <div class="socials">
+                        <a href="https://www.linkedin.com/in/ahmetyunusturna" target="_blank" rel="noopener"
+                            aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/yunusturna" target="_blank" rel="noopener" aria-label="GitHub"><i
+                                class='bx bxl-github'></i></a>
+                        <a href="https://yunusturna.itch.io/" target="_blank" rel="noopener" aria-label="itch.io"><img
+                                src="assets/img/itch-io-logo.png" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== FEATURED GAMES =====-->
+        <section class="section" id="games">
+            <div class="container">
+                <header class="section__head reveal">
+                    <span class="section__index">01</span>
+                    <h2 class="section__title">Featured games</h2>
+                    <p class="section__sub">A shipped title and two award winners.</p>
+                </header>
+
+                <!-- UFC: Manager -->
+                <article class="feature feature--hero reveal">
+                    <div class="feature__body">
+                        <span class="badge badge--live"><span class="dot"></span> Live on the App Store</span>
+                        <h3 class="feature__title">UFC: Manager</h3>
+                        <p class="feature__meta">Officially licensed UFC game · iOS · Unity / C# · Arvis Games</p>
+                        <p class="feature__text">
+                            Free-to-play MMA management game. Build your gym, train fighters, shape their style and
+                            climb the leagues through 5-round fights.
+                        </p>
+
+                        <h4 class="feature__label">My role</h4>
+                        <ul class="checklist">
+                            <li>Built gameplay, UI, camera and VFX systems on an MVC architecture with dependency
+                                injection and signals.</li>
+                            <li>Created a config-driven content pipeline with ScriptableObjects and custom editor
+                                tools.</li>
+                            <li>Built the reward &amp; progression pipeline and optimized for mobile.</li>
+                        </ul>
+
+                        <div class="feature__actions">
+                            <a href="https://apps.apple.com/us/app/ufc-manager/id6781219228" target="_blank"
+                                rel="noopener" class="btn btn--accent"><i class='bx bxl-apple'></i> App Store</a>
+                        </div>
+                    </div>
+
+                    <div class="feature__media">
+                        <div class="phone">
+                            <div class="carousel" data-carousel>
+                                <div class="carousel__track">
+                                    <img src="assets/img/UFCManager/ufc_1.jpg" alt="UFC: Manager – athletes screen" />
+                                    <img src="assets/img/UFCManager/ufc_2.jpg" alt="UFC: Manager screenshot 2" loading="lazy" />
+                                    <img src="assets/img/UFCManager/ufc_3.jpg" alt="UFC: Manager – fight screen" loading="lazy" />
+                                    <img src="assets/img/UFCManager/ufc_4.jpg" alt="UFC: Manager screenshot 4" loading="lazy" />
+                                    <img src="assets/img/UFCManager/ufc_5.jpg" alt="UFC: Manager screenshot 5" loading="lazy" />
+                                    <img src="assets/img/UFCManager/ufc_6.jpg" alt="UFC: Manager screenshot 6" loading="lazy" />
+                                    <img src="assets/img/UFCManager/ufc_7.jpg" alt="UFC: Manager screenshot 7" loading="lazy" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel__controls">
+                            <button class="carousel__btn" data-dir="-1" aria-label="Previous screenshot"><i
+                                    class='bx bx-chevron-left'></i></button>
+                            <div class="carousel__dots"></div>
+                            <button class="carousel__btn" data-dir="1" aria-label="Next screenshot"><i
+                                    class='bx bx-chevron-right'></i></button>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="feature-pair">
+                    <!-- Cherry Chasers -->
+                    <article class="feature reveal">
+                        <button class="video" data-yt="ivb7oaPXNc8" aria-label="Play Cherry Chasers trailer">
+                            <img src="https://i.ytimg.com/vi/ivb7oaPXNc8/hqdefault.jpg" alt="" loading="lazy" />
+                            <span class="video__play"><i class='bx bx-play'></i></span>
+                        </button>
+                        <div class="feature__body">
+                            <span class="badge badge--gold"><i class='bx bxs-trophy'></i> 1st of 300+ teams</span>
+                            <h3 class="feature__title">Cherry Chasers</h3>
+                            <p class="feature__meta">Online party game · Unity / C#</p>
+                            <p class="feature__text">
+                                Fast-paced online party game with 5 maps, each built around its own mechanic. Won
+                                first place among 300+ teams at the Google Game &amp; Application Academy.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Check and Defend -->
+                    <article class="feature reveal">
+                        <button class="video" data-yt="a3mRolhcuOs" aria-label="Play Check and Defend trailer">
+                            <img src="https://i.ytimg.com/vi/a3mRolhcuOs/hqdefault.jpg" alt="" loading="lazy" />
+                            <span class="video__play"><i class='bx bx-play'></i></span>
+                        </button>
+                        <div class="feature__body">
+                            <span class="badge badge--gold"><i class='bx bxs-trophy'></i> Game jam winner</span>
+                            <h3 class="feature__title">Check and Defend</h3>
+                            <p class="feature__meta">Chess × tower defense · Unity / C#</p>
+                            <p class="feature__text">
+                                Every wave randomly flips you between defender and attacker. Survive ten waves. Won
+                                first place at a game jam with the GDG On Campus Doğuş team.
+                            </p>
+                            <div class="feature__actions">
+                                <a href="https://yunusturna.itch.io/checkanddefend" target="_blank" rel="noopener"
+                                    class="link">Play on itch.io <i class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!--===== MORE GAMES =====-->
+                <h3 class="subhead reveal">More games
+                    <a href="https://yunusturna.itch.io/" target="_blank" rel="noopener" class="subhead__link">All on
+                        itch.io <i class='bx bx-right-arrow-alt'></i></a>
+                </h3>
+                <div class="games-grid">
+                    <article class="card reveal">
+                        <button class="video" data-yt="-5jq1QrIfM0" aria-label="Play MazeRoll trailer">
+                            <img src="https://i.ytimg.com/vi/-5jq1QrIfM0/hqdefault.jpg" alt="" loading="lazy" />
+                            <span class="video__play"><i class='bx bx-play'></i></span>
+                        </button>
+                        <div class="card__body">
+                            <div class="card__top">
+                                <h4 class="card__title">MazeRoll</h4>
+                                <a href="https://yunusturna.itch.io/mazeroll" target="_blank" rel="noopener"
+                                    class="card__play" aria-label="Play MazeRoll on itch.io">Play <i
+                                        class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                            <p class="card__text">Navigate mazes using different ball types and power-ups.</p>
+                            <ul class="tags"><li>Puzzle</li><li>Mobile</li></ul>
+                        </div>
+                    </article>
+
+                    <article class="card reveal">
+                        <button class="video" data-yt="NfvTAS4PJyU" aria-label="Play Madis trailer">
+                            <img src="https://i.ytimg.com/vi/NfvTAS4PJyU/hqdefault.jpg" alt="" loading="lazy" />
+                            <span class="video__play"><i class='bx bx-play'></i></span>
+                        </button>
+                        <div class="card__body">
+                            <div class="card__top">
+                                <h4 class="card__title">Madis</h4>
+                                <a href="https://yunusturna.itch.io/madis" target="_blank" rel="noopener"
+                                    class="card__play" aria-label="Play Madis on itch.io">Play <i
+                                        class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                            <p class="card__text">Roll the dice, drop the mask. Dark, atmospheric dice strategy.</p>
+                            <ul class="tags"><li>Strategy</li><li>Game jam</li></ul>
+                        </div>
+                    </article>
+
+                    <article class="card reveal">
+                        <a href="https://yunusturna.itch.io/mergesquare" target="_blank" rel="noopener" class="card__media">
+                            <img src="assets/img/mergesquare.jpeg" alt="MergeSquare cover" loading="lazy" />
+                        </a>
+                        <div class="card__body">
+                            <div class="card__top">
+                                <h4 class="card__title">MergeSquare</h4>
+                                <a href="https://yunusturna.itch.io/mergesquare" target="_blank" rel="noopener"
+                                    class="card__play" aria-label="Play MergeSquare on itch.io">Play <i
+                                        class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                            <p class="card__text">Rebuild scrambled images within a limited number of moves.</p>
+                            <ul class="tags"><li>Puzzle</li><li>Mobile</li></ul>
+                        </div>
+                    </article>
+
+                    <article class="card reveal">
+                        <a href="https://yunusturna.itch.io/monoshot" target="_blank" rel="noopener" class="card__media">
+                            <img src="assets/img/monoshot.jpeg" alt="MonoShot cover" loading="lazy" />
+                        </a>
+                        <div class="card__body">
+                            <div class="card__top">
+                                <h4 class="card__title">MonoShot</h4>
+                                <a href="https://yunusturna.itch.io/monoshot" target="_blank" rel="noopener"
+                                    class="card__play" aria-label="Play MonoShot on itch.io">Play <i
+                                        class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                            <p class="card__text">Retro ball shooter. Three shots per level to hit the goal.</p>
+                            <ul class="tags"><li>Arcade</li><li>Mobile</li></ul>
+                        </div>
+                    </article>
+
+                    <article class="card reveal">
+                        <button class="video" data-yt="b6tLIQdHB-U" aria-label="Play Blocktopia trailer">
+                            <img src="https://i.ytimg.com/vi/b6tLIQdHB-U/hqdefault.jpg" alt="" loading="lazy" />
+                            <span class="video__play"><i class='bx bx-play'></i></span>
+                        </button>
+                        <div class="card__body">
+                            <div class="card__top">
+                                <h4 class="card__title">Blocktopia</h4>
+                            </div>
+                            <p class="card__text">Humorous clicker city builder. Gather, build and survive nightly
+                                raids.</p>
+                            <ul class="tags"><li>City builder</li><li>Clicker</li></ul>
+                        </div>
+                    </article>
+
+                    <article class="card reveal">
+                        <button class="video" data-yt="P-Es68XFPlU" aria-label="Play Kiki trailer">
+                            <img src="https://i.ytimg.com/vi/P-Es68XFPlU/hqdefault.jpg" alt="" loading="lazy" />
+                            <span class="video__play"><i class='bx bx-play'></i></span>
+                        </button>
+                        <div class="card__body">
+                            <div class="card__top">
+                                <h4 class="card__title">Kiki</h4>
+                            </div>
+                            <p class="card__text">Story-driven action adventure. Break a curse to save Kiki's
+                                village.</p>
+                            <ul class="tags"><li>Action adventure</li><li>Survival</li></ul>
+                        </div>
+                    </article>
+                </div>
+
+                <!--===== OTHER PROJECTS =====-->
+                <h3 class="subhead reveal">Other projects</h3>
+                <div class="projects-grid">
+                    <article class="project reveal">
+                        <div class="project__media">
+                            <div class="phone phone--small">
+                                <div class="carousel" data-carousel>
+                                    <div class="carousel__track">
+                                        <img src="assets/img/DogCollarApp/dogcollar_1.jpeg" alt="Smart Dog Collar app screenshot 1" loading="lazy" />
+                                        <img src="assets/img/DogCollarApp/dogcollar_2.jpeg" alt="Smart Dog Collar app screenshot 2" loading="lazy" />
+                                        <img src="assets/img/DogCollarApp/dogcollar_3.jpeg" alt="Smart Dog Collar app screenshot 3" loading="lazy" />
+                                        <img src="assets/img/DogCollarApp/dogcollar_4.jpeg" alt="Smart Dog Collar app screenshot 4" loading="lazy" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel__controls">
+                                <button class="carousel__btn" data-dir="-1" aria-label="Previous screenshot"><i
+                                        class='bx bx-chevron-left'></i></button>
+                                <div class="carousel__dots"></div>
+                                <button class="carousel__btn" data-dir="1" aria-label="Next screenshot"><i
+                                        class='bx bx-chevron-right'></i></button>
+                            </div>
+                        </div>
+                        <div class="project__body">
+                            <h4 class="card__title">Smart Dog Collar</h4>
+                            <p class="card__text">Graduation project. An ESP32 collar streams motion and GPS data to a
+                                Flutter app over BLE, synced to Firebase.</p>
+                            <ul class="tags"><li>Flutter</li><li>ESP32</li><li>Firebase</li></ul>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project__media">
+                            <div class="phone phone--small">
+                                <div class="carousel" data-carousel>
+                                    <div class="carousel__track">
+                                        <img src="assets/img/SportTrackerApp/sportrack_1.jpeg" alt="SelfSporTrack screenshot 1" loading="lazy" />
+                                        <img src="assets/img/SportTrackerApp/sportrack_2.jpeg" alt="SelfSporTrack screenshot 2" loading="lazy" />
+                                        <img src="assets/img/SportTrackerApp/sportrack_3.jpeg" alt="SelfSporTrack screenshot 3" loading="lazy" />
+                                        <img src="assets/img/SportTrackerApp/sportrack_4.jpeg" alt="SelfSporTrack screenshot 4" loading="lazy" />
+                                        <img src="assets/img/SportTrackerApp/sportrack_5.jpeg" alt="SelfSporTrack screenshot 5" loading="lazy" />
+                                        <img src="assets/img/SportTrackerApp/sportrack_6.jpeg" alt="SelfSporTrack screenshot 6" loading="lazy" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel__controls">
+                                <button class="carousel__btn" data-dir="-1" aria-label="Previous screenshot"><i
+                                        class='bx bx-chevron-left'></i></button>
+                                <div class="carousel__dots"></div>
+                                <button class="carousel__btn" data-dir="1" aria-label="Next screenshot"><i
+                                        class='bx bx-chevron-right'></i></button>
+                            </div>
+                        </div>
+                        <div class="project__body">
+                            <h4 class="card__title">SelfSporTrack</h4>
+                            <p class="card__text">Cross-platform fitness tracker: workout programs, weight history,
+                                meal and water logs, dark mode.</p>
+                            <ul class="tags"><li>Flutter</li><li>Dart</li></ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!--===== EXPERIENCE =====-->
+        <section class="section" id="experience">
+            <div class="container">
+                <header class="section__head reveal">
+                    <span class="section__index">02</span>
+                    <h2 class="section__title">Experience</h2>
+                    <p class="section__sub">Five studios, all game development.</p>
+                </header>
+
+                <ol class="timeline">
+                    <li class="job reveal">
+                        <img src="assets/img/arvisgameslogo.jpeg" alt="" class="job__logo" loading="lazy" />
+                        <div class="job__body">
+                            <div class="job__head">
+                                <h3 class="job__company">Arvis Games</h3>
+                                <span class="job__date">Feb 2026 – Aug 2026</span>
+                            </div>
+                            <p class="job__role">Intern Game Developer · <a
+                                    href="https://apps.apple.com/us/app/ufc-manager/id6781219228" target="_blank"
+                                    rel="noopener">UFC: Manager</a></p>
+                            <ul class="job__list">
+                                <li>Worked in a large production Unity / C# codebase for an officially licensed UFC
+                                    game.</li>
+                                <li>Built decoupled gameplay, UI, camera and VFX systems with DI and signal-driven
+                                    design.</li>
+                                <li>Made designer-facing tools with ScriptableObjects and custom editors.</li>
+                                <li>Refactored monolithic controllers into modular command pipelines.</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="job reveal">
+                        <img src="assets/img/UdoLogo.jpg" alt="" class="job__logo" loading="lazy" />
+                        <div class="job__body">
+                            <div class="job__head">
+                                <h3 class="job__company">UDO</h3>
+                                <span class="job__date">Jul 2025 – Aug 2025</span>
+                            </div>
+                            <p class="job__role">Intern Game Developer</p>
+                            <ul class="job__list">
+                                <li>Developed Unity games with a focus on optimization.</li>
+                                <li>Built in-game editor tools to speed up designer workflow.</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="job reveal">
+                        <img src="assets/img/genarionLogo.jpg" alt="" class="job__logo" loading="lazy" />
+                        <div class="job__body">
+                            <div class="job__head">
+                                <h3 class="job__company">Genarion</h3>
+                                <span class="job__date">Nov 2024 – Jul 2025</span>
+                            </div>
+                            <p class="job__role">Intern Unity Developer</p>
+                            <ul class="job__list">
+                                <li>Built the Unity data layer for an LLM-based NPC dialogue engine.</li>
+                                <li>Created environments, assets and mechanics.</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="job reveal">
+                        <img src="assets/img/stakGamesLogo.jpg" alt="" class="job__logo" loading="lazy" />
+                        <div class="job__body">
+                            <div class="job__head">
+                                <h3 class="job__company">Stak Games</h3>
+                                <span class="job__date">Dec 2023 – Oct 2024</span>
+                            </div>
+                            <p class="job__role">Jr. Game Developer</p>
+                            <ul class="job__list">
+                                <li>Designed and built core gameplay and player–map interaction systems.</li>
+                                <li>Implemented and optimized player–UI interactions across several projects.</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="job reveal">
+                        <img src="assets/img/undocoLogo.png" alt="" class="job__logo" loading="lazy" />
+                        <div class="job__body">
+                            <div class="job__head">
+                                <h3 class="job__company">Undoco Games</h3>
+                                <span class="job__date">Jun 2023 – Dec 2023</span>
+                            </div>
+                            <p class="job__role">Co-Founder &amp; Game Developer</p>
+                            <ul class="job__list">
+                                <li>Built multiplayer player–map and character interaction systems.</li>
+                                <li>Got the studio into the BUG-Lab Tekmer pre-incubation program.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!--===== ABOUT =====-->
+        <section class="section" id="about">
+            <div class="container">
+                <header class="section__head reveal">
+                    <span class="section__index">03</span>
+                    <h2 class="section__title">About</h2>
+                </header>
+
+                <div class="about">
+                    <div class="about__intro reveal">
+                        <p class="about__lead">Computer Engineer from Doğuş University, focused on game development
+                            with Unity and C#.</p>
+                        <p>I care about clean architecture that keeps games fast and easy to change: dependency
+                            injection, event-driven systems and tools that let designers work without code. I also
+                            build with Flutter and IoT hardware when a project needs it.</p>
+                    </div>
+
+                    <div class="skills reveal">
+                        <div class="skills__group">
+                            <h3 class="skills__title">Engine &amp; languages</h3>
+                            <ul class="chips">
+                                <li><img src="assets/img/unityLogo.png" alt="" />Unity</li>
+                                <li><img src="assets/img/csharpLogo.png" alt="" />C#</li>
+                                <li><img src="assets/img/flutterLogo.svg" alt="" />Flutter</li>
+                                <li><img src="assets/img/dart-language.png" alt="" />Dart</li>
+                            </ul>
+                        </div>
+                        <div class="skills__group">
+                            <h3 class="skills__title">Architecture</h3>
+                            <ul class="chips">
+                                <li>Zenject (DI)</li><li>SOLID</li><li>MVC</li><li>Signals / Events</li>
+                                <li>Object Pooling</li><li>ScriptableObjects</li>
+                            </ul>
+                        </div>
+                        <div class="skills__group">
+                            <h3 class="skills__title">Unity ecosystem</h3>
+                            <ul class="chips">
+                                <li>Editor Tools</li><li>UniTask</li><li>R3</li><li>DOTween</li><li>Addressables</li>
+                                <li>Profiler</li><li>Mobile Optimization</li>
+                            </ul>
+                        </div>
+                        <div class="skills__group">
+                            <h3 class="skills__title">Tools</h3>
+                            <ul class="chips">
+                                <li>Git</li><li>Firebase</li><li>Figma</li><li>Notion</li><li>Trello</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-grid">
+                    <div class="info reveal">
+                        <h3 class="info__title"><i class='bx bxs-graduation'></i> Education</h3>
+                        <ul class="info__list">
+                            <li>
+                                <img src="assets/img/douLogo.png" alt="" loading="lazy" />
+                                <div>
+                                    <strong>Doğuş University</strong>
+                                    <span>B.Sc. Computer Engineering · Full merit scholarship</span>
+                                </div>
+                                <time>2022 – 2026</time>
+                            </li>
+                            <li>
+                                <img src="assets/img/vsbLogo.png" alt="" loading="lazy" />
+                                <div>
+                                    <strong>VSB – Technical University of Ostrava</strong>
+                                    <span>Erasmus+ exchange semester · Czech Republic</span>
+                                </div>
+                                <time>2024</time>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info reveal">
+                        <h3 class="info__title"><i class='bx bxs-flag'></i> Leadership</h3>
+                        <ul class="info__list">
+                            <li>
+                                <img src="assets/img/gdgLogo.svg" alt="" loading="lazy" />
+                                <div>
+                                    <strong>GDG On Campus Doğuş · Game Dev Team Lead</strong>
+                                    <span>Led a team that released 5 games, incl. jam winner Check and Defend.</span>
+                                </div>
+                                <time>2025 – 2026</time>
+                            </li>
+                            <li>
+                                <img src="assets/img/gdgLogo.svg" alt="" loading="lazy" />
+                                <div>
+                                    <strong>GDG On Campus Doğuş · President</strong>
+                                    <span>Ran workshops, podcasts and conferences; founded mobile &amp; web
+                                        teams.</span>
+                                </div>
+                                <time>2024 – 2025</time>
+                            </li>
+                            <li>
+                                <span class="info__icon"><i class='bx bx-group'></i></span>
+                                <div>
+                                    <strong>Türkiye Entrepreneurship Foundation</strong>
+                                    <span>Project management intern; led a 2,000+ member community.</span>
+                                </div>
+                                <time>2024 – 2025</time>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== CONTACT =====-->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <div class="contact__box reveal">
+                    <span class="section__index">04</span>
+                    <h2 class="contact__title">Let's build something playable.</h2>
+                    <p class="contact__text">The fastest way to reach me is email.</p>
+                    <a href="mailto:ahmetyunusturna@hotmail.com" class="contact__mail">ahmetyunusturna@hotmail.com <i
+                            class='bx bx-right-arrow-alt'></i></a>
+                    <div class="socials socials--center">
+                        <a href="https://www.linkedin.com/in/ahmetyunusturna" target="_blank" rel="noopener"
+                            aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/yunusturna" target="_blank" rel="noopener" aria-label="GitHub"><i
+                                class='bx bxl-github'></i></a>
+                        <a href="https://yunusturna.itch.io/" target="_blank" rel="noopener" aria-label="itch.io"><img
+                                src="assets/img/itch-io-logo.png" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <div id="footer-container"></div>
+    <footer class="footer">
+        <div class="container footer__inner">
+            <span>© <span id="year">2026</span> Ahmet Yunus Turna</span>
+            <a href="#home" class="link">Back to top <i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
 
-    <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!-- Custom Scripts -->
-    <script src="assets/js/particles.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
